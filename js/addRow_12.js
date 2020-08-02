@@ -75,7 +75,7 @@ function deleteInputValues(){
 }
 
 function CheckInput() {
-    var InputsFree = document.querySelectorAll('table input:not([id="Nr"])');
+    var InputsFree = document.querySelectorAll('table input:not([id="id"])');
     var InputValues = []
     for ( i of InputsFree ) {InputValues.push(i.value) }
     function Mind (val) { return val == ""}
@@ -120,7 +120,7 @@ function addRow() {
         if (CheckInput()) {
     } else {
         let newUser = kiolvas();
-        delete newUser.Nr;
+        delete newUser.id;
         addRowFetch(newUser);
         //leker()
         };
@@ -162,7 +162,7 @@ function addRow() {
     if (CheckInput()) {
     } else {
         let newUser = kiolvas();
-        delete newUser.Nr;
+        delete newUser.id;
         new Promise ((resolve, reject) => {
             resolve(addRowFetch(newUser))
         }
