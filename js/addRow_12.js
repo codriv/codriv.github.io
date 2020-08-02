@@ -21,7 +21,7 @@ let fetchInitPost = {
     headers: {"Content-Type": "application/json"},
     mode: "cors",
     cache: "no-cache",
-    //body: JSON.stringify(kiolvas())
+    body: JSON.stringify(kiolvas())
 };
 
 let fetchInitDelete = {
