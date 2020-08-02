@@ -203,7 +203,7 @@ function addRow() {
 
 function leker() {
     //var ssz = getInputIDs()[0];
-    fetch("./db/users", fetchInitGet).then(
+    fetch("/db/users", fetchInitGet).then(
         data => data.json(),
         err => console.log(err)
         ).then(
