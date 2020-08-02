@@ -203,7 +203,7 @@ function addRow() {
 
 function leker() {
     //var ssz = getInputIDs()[0];
-    fetch("/db/users", fetchInitGet).then(
+    fetch("https://my-json-server.typicode.com/codriv/codriv.github.io/users", fetchInitGet).then(
         data => data.json(),
         err => console.log(err)
         ).then(
@@ -272,7 +272,7 @@ function createUsersDb() {
 }
 
 function rowDelFetch (sorszam) {
-    fetch(`http://localhost:3000/users/${sorszam}`, fetchInitDelete).then(
+    fetch(`https://my-json-server.typicode.com/codriv/codriv.github.io/users/${sorszam}`, fetchInitDelete).then(
         resolve => resolve.json(),
         rejet => console.error(reject)
     ).then(
@@ -283,7 +283,7 @@ function rowDelFetch (sorszam) {
 
 function addRowFetch (newUser) {
     fetchInitPost.body= JSON.stringify(newUser);
-    fetch("http://localhost:3000/users", fetchInitPost).then(
+    fetch("https://my-json-server.typicode.com/codriv/codriv.github.io/users", fetchInitPost).then(
         resolve => resolve.json(),
         rejet => console.error(reject)
     ).then(
