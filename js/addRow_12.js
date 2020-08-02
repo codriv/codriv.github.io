@@ -282,7 +282,7 @@ function rowDelFetch (sorszam) {
 }
 
 function addRowFetch (newUser) {
-    fetchInitPost.body= JSON.stringify(newUser);
+    fetchInitPost.body = JSON.stringify(newUser);
     fetch("https://my-json-server.typicode.com/codriv/codriv.github.io/users", fetchInitPost).then(
         resolve => resolve.json(),
         rejet => console.error(reject)
